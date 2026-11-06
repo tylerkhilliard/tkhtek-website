@@ -3,167 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — ChronoLens & TKH Tek</title>
-  <meta name="description" content="Official Privacy & Security Policy for ChronoLens and TKH Tek. 100% on-device processing and zero data collection.">
+  <title>Privacy Policy — TKH Tek</title>
+  <meta name="description" content="Privacy policy for TKH Tek applications and utilities.">
   <link rel="icon" type="image/png" href="app-icon.png">
-  <style>
-    :root {
-      --bg: #0b0f19;
-      --card-bg: rgba(255, 255, 255, 0.04);
-      --card-border: rgba(255, 255, 255, 0.08);
-      --accent: #3b82f6;
-      --text: #f3f4f6;
-      --text-muted: #9ca3af;
-      --max-w: 860px;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      padding: 0 20px 80px 20px;
-    }
-
-    header {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 40px 0 20px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid var(--card-border);
-    }
-
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    .brand {
-      font-weight: 800;
-      color: #fff;
-      font-size: 1.25rem;
-    }
-
-    .container {
-      max-width: var(--max-w);
-      margin: 40px auto 0 auto;
-    }
-
-    h1 {
-      font-size: 2.4rem;
-      letter-spacing: -0.8px;
-      margin-bottom: 8px;
-      color: #fff;
-    }
-
-    .meta {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-bottom: 32px;
-    }
-
-    .summary-box {
-      background: rgba(34, 197, 94, 0.08);
-      border: 1px solid rgba(34, 197, 94, 0.25);
-      border-radius: 16px;
-      padding: 24px;
-      margin-bottom: 36px;
-    }
-
-    .summary-box h3 {
-      color: #4ade80;
-      margin-bottom: 8px;
-      font-size: 1.15rem;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      color: #fff;
-      margin: 36px 0 14px 0;
-      border-top: 1px solid var(--card-border);
-      padding-top: 24px;
-    }
-
-    p { margin-bottom: 16px; color: #d1d5db; }
-    ul { margin: 0 0 20px 24px; color: #d1d5db; }
-    li { margin-bottom: 8px; }
-
-    footer {
-      max-width: var(--max-w);
-      margin: 60px auto 0 auto;
-      padding-top: 24px;
-      border-top: 1px solid var(--card-border);
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <a href="index.html" class="brand">← TKH Tek</a>
-    <a href="mailto:chronolens@tkhtek.com">chronolens@tkhtek.com</a>
+    <a href="index.html" class="brand">
+      <div class="brand-badge">T</div>
+      TKH Tek
+    </a>
+    <nav>
+      <a href="index.html">Apps</a>
+      <a href="studio.html">Studio</a>
+      <a href="privacy.html" class="active">Privacy</a>
+      <a href="mailto:chronolens@tkhtek.com">Support</a>
+    </nav>
   </header>
 
-  <main class="container">
-    <h1>Security & Privacy Policy</h1>
-    <div class="meta">Effective Date: November 2026 • Published by TKH Tek (tkhtek.com)</div>
+  <main>
+    <div class="legal-container">
+      <h1>Privacy Policy</h1>
+      <p style="color: var(--text-muted); margin-bottom: 32px;">Effective Date: November 2026</p>
 
-    <div class="summary-box">
-      <h3>🛡️ The Zero Data Collection Pledge</h3>
-      <p>
-        ChronoLens is designed with privacy as its primary architecture. <strong>We do not collect, store, sell, or transmit any user data, photos, camera feeds, or personal identifiers.</strong> All image analysis and color calculations occur 100% on your device.
-      </p>
+      <div class="legal-section">
+        <h2>1. Overview</h2>
+        <p>
+          TKH Tek builds privacy-first software. Our core design principle is simple: your data belongs to you. We believe the safest data is data that is never collected in the first place.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h2>2. Data Collection & Camera Access</h2>
+        <p>
+          For applications that require visual input (such as <strong>ChronoLens</strong>):
+        </p>
+        <ul>
+          <li><strong>Camera Frames:</strong> The camera feed is used strictly to analyze color values on your screen in real time. All processing occurs entirely in volatile memory on your device.</li>
+          <li><strong>No Storage:</strong> Live camera feeds and color samples are never saved, recorded, or transmitted to any remote server.</li>
+          <li><strong>Photo Library:</strong> When you choose to inspect an existing image, it is read locally. We never upload your photos or photo metadata.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2>3. Tracking & Analytics</h2>
+        <p>
+          Our apps contain zero third-party software development kits (SDKs), advertising networks, or persistent user tracking mechanisms. We do not build personal profiles, sell behavioral data, or track your activity across other apps or websites.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h2>4. Contact & Support</h2>
+        <p>
+          If you contact our support team via email, your email address and message contents are used solely to assist you with your inquiry. We do not add support inquiries to marketing mailing lists.
+        </p>
+        <p>
+          For privacy or support questions, reach out directly at: <a href="mailto:chronolens@tkhtek.com">chronolens@tkhtek.com</a>
+        </p>
+      </div>
     </div>
-
-    <h2>1. Overview</h2>
-    <p>
-      TKH Tek ("we", "us", or "our") develops assistive accessibility software for Apple platforms. This Privacy Policy applies to the ChronoLens mobile application and explains our handling of information and permissions.
-    </p>
-
-    <h2>2. Information We Do Not Collect</h2>
-    <ul>
-      <li><strong>Visual Imagery:</strong> Live camera frames and photos loaded from your library exist only in volatile device RAM while you are inspecting them. No images are saved remotely or sent over the internet.</li>
-      <li><strong>Personal Identifiable Information (PII):</strong> We do not ask for, collect, or store your name, email address, physical location, or device hardware IDs.</li>
-      <li><strong>Usage Telemetry & Analytics:</strong> ChronoLens does not contain any third-party analytics frameworks (e.g. Firebase, Mixpanel, Segment) or advertising networks.</li>
-    </ul>
-
-    <h2>3. System Permissions</h2>
-    <ul>
-      <li><strong>Camera (<code>NSCameraUsageDescription</code>):</strong> Used exclusively to capture real-world objects for color inspection. The feed never leaves your iPhone.</li>
-      <li><strong>Photo Library (<code>NSPhotoLibraryUsageDescription</code>):</strong> Used via Apple PhotoKit to let you choose an existing image to analyze. Only the specific picture you select is temporarily read into memory.</li>
-      <li><strong>Speech & Haptics:</strong> Utilizes iOS system AVFoundation and CoreHaptics to announce colors and pulse tactile rhythms. No audio is recorded.</li>
-    </ul>
-
-    <h2>4. Financial Security & In-App Purchases</h2>
-    <p>
-      Voluntary tips supporting independent development are handled exclusively through Apple's StoreKit 2 framework. All financial transactions are managed and secured by Apple. TKH Tek never receives, sees, or stores your credit card details or billing addresses.
-    </p>
-
-    <h2>5. App Store Privacy Certification</h2>
-    <p>
-      In accordance with Apple App Store guidelines, ChronoLens is certified with the <strong>"Data Not Collected"</strong> Privacy Nutrition Label.
-    </p>
-
-    <h2>6. Contact & Audits</h2>
-    <p>
-      If you have questions regarding this privacy policy or our technical architecture, please contact:
-    </p>
-    <p>
-      <strong>TKH Tek</strong><br>
-      Email: <a href="mailto:chronolens@tkhtek.com">chronolens@tkhtek.com</a><br>
-      Website: <a href="https://tkhtek.com">https://tkhtek.com</a>
-    </p>
   </main>
 
   <footer>
-    <div>&copy; 2026 TKH Tek. All rights reserved.</div>
-    <div><a href="index.html">Home</a> • <a href="mailto:chronolens@tkhtek.com">Support</a></div>
+    <div>© 2026 TKH Tek. Built natively for Apple platforms.</div>
+    <div class="footer-links">
+      <a href="index.html">Apps</a>
+      <a href="studio.html">Studio</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="mailto:chronolens@tkhtek.com">Contact</a>
+    </div>
   </footer>
 
 </body>
