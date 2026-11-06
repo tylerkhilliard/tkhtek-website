@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TKH Tek — Innovative Mobile Accessibility Apps</title>
-  <meta name="description" content="TKH Tek builds privacy-first, on-device assistive accessibility apps. Discover ChronoLens, the advanced color assistant for color vision deficiencies.">
+  <title>TKH Tek — Software Crafted with Precision & Privacy</title>
+  <meta name="description" content="TKH Tek is an independent software studio building high-performance iOS apps, developer tools, and intelligent on-device utilities.">
   <link rel="icon" type="image/png" href="app-icon.png">
   <style>
     :root {
       --bg: #0b0f19;
-      --card-bg: rgba(255, 255, 255, 0.04);
+      --card-bg: rgba(255, 255, 255, 0.035);
       --card-border: rgba(255, 255, 255, 0.08);
       --accent: #3b82f6;
       --accent-glow: rgba(59, 130, 246, 0.35);
       --text: #f3f4f6;
       --text-muted: #9ca3af;
-      --max-w: 1080px;
+      --max-w: 1100px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -51,31 +51,32 @@
 
     .brand-badge {
       background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-      width: 28px;
-      height: 28px;
-      border-radius: 8px;
+      width: 32px;
+      height: 32px;
+      border-radius: 9px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 900;
       color: #fff;
+      box-shadow: 0 4px 14px var(--accent-glow);
     }
 
-    nav { display: flex; gap: 20px; font-size: 0.95rem; }
+    nav { display: flex; gap: 24px; font-size: 0.95rem; }
     nav a { color: var(--text-muted); font-weight: 500; }
     nav a:hover { color: #fff; text-decoration: none; }
 
     .hero {
       max-width: var(--max-w);
-      margin: 40px auto 80px auto;
+      margin: 50px auto 70px auto;
       padding: 0 24px;
       text-align: center;
     }
 
     .badge-pill {
       display: inline-block;
-      padding: 6px 16px;
+      padding: 6px 18px;
       border-radius: 999px;
       background: rgba(59, 130, 246, 0.12);
       border: 1px solid rgba(59, 130, 246, 0.3);
@@ -83,80 +84,106 @@
       font-size: 0.85rem;
       font-weight: 600;
       margin-bottom: 24px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
     }
 
     h1 {
-      font-size: clamp(2.4rem, 6vw, 3.8rem);
+      font-size: clamp(2.5rem, 6.5vw, 4.2rem);
       font-weight: 800;
       letter-spacing: -1.5px;
-      line-height: 1.15;
-      margin-bottom: 20px;
+      line-height: 1.12;
+      margin-bottom: 22px;
       background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .hero-subtitle {
-      font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
       color: var(--text-muted);
-      max-width: 680px;
+      max-width: 720px;
       margin: 0 auto 36px auto;
     }
 
-    .app-showcase {
+    .section-title-wrap {
       max-width: var(--max-w);
-      margin: 0 auto 80px auto;
+      margin: 0 auto 32px auto;
       padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.5px;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+
+    /* App Cards Grid */
+    .apps-container {
+      max-width: var(--max-w);
+      margin: 0 auto 90px auto;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
     }
 
     .app-card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
-      border-radius: 24px;
-      padding: 48px;
+      border-radius: 28px;
+      padding: 44px;
       display: grid;
       grid-template-columns: 140px 1fr;
       gap: 36px;
       align-items: center;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-      position: relative;
-      overflow: hidden;
+      transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
-    @media (max-width: 768px) {
-      .app-card {
-        grid-template-columns: 1fr;
-        padding: 32px 24px;
-        text-align: center;
-        gap: 24px;
-      }
+    .app-card:hover {
+      border-color: rgba(255, 255, 255, 0.16);
+      transform: translateY(-2px);
     }
 
     .app-icon {
       width: 140px;
       height: 140px;
-      border-radius: 28px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 40px var(--accent-glow);
-      margin: 0 auto;
+      border-radius: 30px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      object-fit: cover;
     }
 
     .app-details h2 {
       font-size: 2rem;
+      font-weight: 800;
       letter-spacing: -0.5px;
-      margin-bottom: 8px;
+      color: #fff;
+      margin-bottom: 4px;
     }
 
     .app-tagline {
       color: #60a5fa;
       font-weight: 600;
+      font-size: 1rem;
       margin-bottom: 14px;
-      font-size: 1.05rem;
     }
 
     .app-desc {
       color: var(--text-muted);
+      font-size: 1.02rem;
       margin-bottom: 24px;
-      font-size: 0.98rem;
+      max-width: 760px;
     }
 
     .features-grid {
@@ -164,15 +191,15 @@
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 16px;
       margin-bottom: 28px;
-      text-align: left;
     }
 
     .feature-item {
       background: rgba(255, 255, 255, 0.02);
       border: 1px solid rgba(255, 255, 255, 0.05);
-      padding: 12px 14px;
       border-radius: 12px;
+      padding: 12px 14px;
       font-size: 0.88rem;
+      color: var(--text-muted);
     }
 
     .feature-item strong {
@@ -185,10 +212,6 @@
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-    }
-
-    @media (max-width: 768px) {
-      .cta-buttons { justify-content: center; }
     }
 
     .btn-primary {
@@ -213,7 +236,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.06);
       color: #fff;
       font-weight: 600;
       padding: 12px 20px;
@@ -226,7 +249,62 @@
       text-decoration: none;
     }
 
-    /* Pillars */
+    /* Lab / Coming Soon Cards */
+    .lab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .lab-card {
+      background: var(--card-bg);
+      border: 1px dashed var(--card-border);
+      border-radius: 20px;
+      padding: 32px;
+      position: relative;
+    }
+
+    .lab-status {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(139, 92, 246, 0.15);
+      color: #c084fc;
+      margin-bottom: 16px;
+    }
+
+    .lab-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .lab-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    .lab-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .lab-tag {
+      font-size: 0.78rem;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 4px 10px;
+      border-radius: 6px;
+      color: #94a3b8;
+    }
+
+    /* Studio Philosophy */
     .pillars {
       max-width: var(--max-w);
       margin: 0 auto 100px auto;
@@ -239,31 +317,32 @@
     .pillar-card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
-      border-radius: 18px;
-      padding: 28px;
+      border-radius: 20px;
+      padding: 32px;
     }
 
     .pillar-icon {
-      font-size: 1.8rem;
-      margin-bottom: 12px;
+      font-size: 2rem;
+      margin-bottom: 14px;
     }
 
     .pillar-card h3 {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       margin-bottom: 8px;
       color: #fff;
     }
 
     .pillar-card p {
       color: var(--text-muted);
-      font-size: 0.92rem;
+      font-size: 0.94rem;
+      line-height: 1.6;
     }
 
     footer {
       border-top: 1px solid var(--card-border);
       max-width: var(--max-w);
       margin: 0 auto;
-      padding: 40px 24px;
+      padding: 44px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -275,7 +354,20 @@
 
     .footer-links {
       display: flex;
-      gap: 20px;
+      gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .app-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 32px 24px;
+      }
+      .app-icon { margin: 0 auto; }
+      .cta-buttons { justify-content: center; }
+      .section-title-wrap { flex-direction: column; align-items: flex-start; gap: 8px; }
+      footer { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
     }
   </style>
 </head>
@@ -288,6 +380,7 @@
     </div>
     <nav>
       <a href="#apps">Apps</a>
+      <a href="#studio">Studio</a>
       <a href="privacy.html">Privacy</a>
       <a href="mailto:chronolens@tkhtek.com">Support</a>
     </nav>
@@ -295,21 +388,29 @@
 
   <main>
     <section class="hero">
-      <div class="badge-pill">Independent iOS Accessibility Studio</div>
-      <h1>Empowering Every Sight & Sound.</h1>
+      <div class="badge-pill">Independent Software Studio</div>
+      <h1>Software Crafted with Purpose & Privacy.</h1>
       <p class="hero-subtitle">
-        TKH Tek builds intelligent, on-device assistive tools engineered with zero tracking, zero cloud latency, and complete privacy.
+        TKH Tek engineers high-performance mobile applications, accessibility solutions, and modern software utilities—built native, fast, and 100% on-device.
       </p>
     </section>
 
-    <section class="app-showcase" id="apps">
+    <!-- Flagship Applications -->
+    <div class="section-title-wrap" id="apps">
+      <div>
+        <h2 class="section-title">Featured Applications</h2>
+        <p class="section-desc">Native iOS tools engineered for daily utility.</p>
+      </div>
+    </div>
+
+    <section class="apps-container">
       <div class="app-card">
         <img src="app-icon.png" alt="ChronoLens Icon" class="app-icon">
         <div class="app-details">
           <h2>ChronoLens</h2>
           <div class="app-tagline">Real-Time Precision Color Assistant</div>
           <p class="app-desc">
-            Designed for Deuteranopia, Protanopia, and Tritanopia. Identify true color names, compare two items side-by-side with Delta-E contrast matching, and spotlight specific shades in complex scenes—100% on-device.
+            An assistive visual utility designed for Deuteranopia, Protanopia, Tritanopia, and everyday designers. Pinpoint true color names, compare two items side-by-side with Delta-E contrast matching, and spotlight specific shades in complex scenes.
           </p>
 
           <div class="features-grid">
@@ -327,50 +428,86 @@
             </div>
             <div class="feature-item">
               <strong>🔒 Zero Data Collection</strong>
-              No accounts, no ads, and no external cloud servers.
+              100% on-device. No accounts, ads, or tracking.
             </div>
           </div>
 
           <div class="cta-buttons">
-            <a href="https://apps.apple.com" class="btn-primary" id="app-store-btn">
+            <a href="#" class="btn-primary" id="app-store-btn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.63-.77 1.06-1.84.95-2.91-1 .04-2.17.65-2.86 1.44-.57.65-1.07 1.74-.94 2.8 1.11.09 2.22-.56 2.85-1.33z"/>
               </svg>
-              Download on App Store
+              Coming Soon to App Store
             </a>
             <a href="privacy.html" class="btn-secondary">Privacy Policy</a>
             <a href="mailto:chronolens@tkhtek.com?subject=ChronoLens%20Support" class="btn-secondary">Email Support</a>
           </div>
         </div>
       </div>
+
+      <!-- TKH Tek Lab / Pipeline Section -->
+      <div class="lab-grid">
+        <div class="lab-card">
+          <span class="lab-status">In Active Development</span>
+          <h3>Productivity & On-Device Utilities</h3>
+          <p>We are building specialized tools focused on focus, workflow streamlining, and hardware-accelerated processing that never depend on cloud services.</p>
+          <div class="lab-tags">
+            <span class="lab-tag">SwiftUI</span>
+            <span class="lab-tag">Zero Cloud</span>
+            <span class="lab-tag">iOS & macOS</span>
+          </div>
+        </div>
+
+        <div class="lab-card">
+          <span class="lab-status">Research & Prototyping</span>
+          <h3>Audio & Sensory Accessibility</h3>
+          <p>Expanding multi-sensory feedback through custom CoreHaptics engines, spatial audio cues, and intuitive gesture-driven interfaces.</p>
+          <div class="lab-tags">
+            <span class="lab-tag">CoreHaptics</span>
+            <span class="lab-tag">Sensory Design</span>
+            <span class="lab-tag">Accessibility</span>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- Studio Philosophy Section -->
+    <div class="section-title-wrap" id="studio">
+      <div>
+        <h2 class="section-title">Our Studio Philosophy</h2>
+        <p class="section-desc">The non-negotiable principles behind every product we build.</p>
+      </div>
+    </div>
 
     <section class="pillars">
       <div class="pillar-card">
         <div class="pillar-icon">🔒</div>
-        <h3>Privacy First</h3>
-        <p>Your camera feeds, photos, and voice data stay strictly on your Apple Silicon hardware. No data is collected or tracked.</p>
+        <h3>Zero-Knowledge Privacy</h3>
+        <p>Your camera streams, files, and personal data never leave your device. We don't host analytics databases or sell advertising profiles.</p>
       </div>
 
       <div class="pillar-card">
-        <div class="pillar-icon">⚡️</div>
-        <h3>Zero Latency</h3>
-        <p>Color space conversions and computer vision algorithms are computed in real time on the GPU with no cloud roundtrips.</p>
+        <div class="pillar-icon">⚡</div>
+        <h3>Native Hardware Performance</h3>
+        <p>Built directly with Apple's native frameworks—Swift, Metal, and Accelerate—delivering instant responsiveness and low battery usage.</p>
       </div>
 
       <div class="pillar-card">
-        <div class="pillar-icon">❤️</div>
-        <h3>Accessibility Native</h3>
-        <p>Built with VoiceOver spoken color announcements, tailored haptic patterns, and support for all major color vision profiles.</p>
+        <div class="pillar-icon">✨</div>
+        <h3>Intuitive, Dignified Design</h3>
+        <p>Whether creating accessibility aids or daily productivity software, we build tools that feel delightful, tactile, and natural to use.</p>
       </div>
     </section>
   </main>
 
   <footer>
-    <div>&copy; 2026 TKH Tek. All rights reserved.</div>
+    <div>
+      © 2026 TKH Tek. Crafted with precision for Apple platforms.
+    </div>
     <div class="footer-links">
+      <a href="#apps">Apps</a>
       <a href="privacy.html">Privacy Policy</a>
-      <a href="mailto:chronolens@tkhtek.com">Support: chronolens@tkhtek.com</a>
+      <a href="mailto:chronolens@tkhtek.com">Contact</a>
     </div>
   </footer>
 
